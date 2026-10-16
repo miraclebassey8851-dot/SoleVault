@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLEVAULT — Find Your Next Pair</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">SOLEVAULT</a>
+      <nav class="desktop-nav">
+        <a href="shop.html?sort=newest">New arrivals</a><a href="shop.html">Shop all</a
+        ><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button aria-label="Search">
+          <i class="ph-duotone ph-magnifying-glass"></i></button
+        ><button aria-label="Account"><i class="ph-duotone ph-user"></i></button
+        ><a class="header-icon" href="cart.html" aria-label="Shopping bag"><i class="ph-duotone ph-bag"></i><span class="cart-count" data-cart-count>0</span></a
+        ><button class="menu-toggle" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">THE NEXT STEP IN YOUR ROTATION</span>
+        <h1>DISCOVER KICKS<br />THAT HIT DIFFERENT.</h1>
+        <p>
+          Fresh heat. Iconic silhouettes. Your next favourite pair is waiting.
+        </p>
+        <a class="pill-button light" href="shop.html"
+          >Shop the drop <span><i class="ph ph-arrow-up-right"></i></span
+        ></a>
+      </div>
+      <div class="hero-shoe">
+        <img
+          src="assets/damon-pridgen-nike-shoe-concept-design-removebg-preview.png"
+          alt="Red and black high-top sneaker"
+        />
+      </div>
+      <div class="hero-note">
+        <p>
+          Authentic Jordan, adidas and more, all in one place.
+          Fresh drops, iconic classics, and the pair that finally completes your fit.
+        </p>
+        <a class="text-link" href="shop.html"
+          >Explore the vault <i class="ph ph-arrow-right"></i
+        ></a>
+      </div>
+      <div class="hero-index">01 / 04</div>
+    </section>
+    <main>
+      <section class="section" id="picks">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CURATED FOR YOU</span>
+            <h2>Hottest picks<span class="red-dot">.</span></h2>
+          </div>
+          <a class="text-link" href="shop.html"
+            >View all sneakers <i class="ph ph-arrow-right"></i
+          ></a>
+        </div>
+        <div class="product-grid" id="featured-products"></div>
+      </section>
+      <section class="collection-banner" id="collection">
+        <div class="collection-image">
+          <img
+            src="assets/SMART-removebg-preview.png"
+            alt="Dark athletic sneakers"
+          />
+        </div>
+        <div class="collection-copy">
+          <span class="eyebrow">MAKE IT YOURS</span>
+          <h2>FIND YOUR<br />PERFECT STYLE.</h2>
+          <p>
+            From everyday essentials to statement-making drops, find a pair that
+            moves with you.
+          </p>
+          <a class="pill-button outline-fill" href="shop.html"
+            >Explore collection <i class="ph ph-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+      <section class="section" id="all-products">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">MORE TO LOVE</span>
+            <h2>Made to move<span class="red-dot">.</span></h2>
+          </div>
+          <p class="muted">Everyday comfort. All-day confidence.</p>
+        </div>
+        <div class="product-grid" id="all-product-grid"></div>
+      </section>
+      <section class="promo-banner">
+        <div>
+          <span class="eyebrow">YOUR ROTATION, UPGRADED</span>
+          <h2>GOOD SHOES.<br />GREAT ENERGY.</h2>
+          <p>Find the pair that says everything without saying a word.</p>
+          <a class="pill-button light" href="shop.html"
+            >Find your pair <span><i class="ph ph-arrow-up-right"></i></span
+          ></a>
+        </div>
+        <div class="promo-art">
+          <img
+            src="assets/7e6192b2-becd-4245-9bc5-02077535fd40_removalai_preview.png"
+            alt="Red sneaker detail"
+          />
+        </div>
+      </section>
+      <section class="section reviews-section" id="reviews">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">THE WORD ON THE STREET</span>
+            <h2>Real ones. Real reviews<span class="red-dot">.</span></h2>
+          </div>
+          <div class="review-score">
+            <strong>4.9</strong><span class="stars">★★★★★</span
+            ><small>LOVED BY SNEAKER FANS</small>
+          </div>
+        </div>
+        <div class="review-grid" id="review-grid"></div>
+      </section>
+      <section class="section faq-section" id="faq">
+        <div class="faq-intro">
+          <span class="eyebrow">NEED TO KNOW?</span>
+          <h2>Frequently asked<br />questions<span class="red-dot">.</span></h2>
+          <p>Quick answers, so you can get back to the good stuff.</p>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+      <section class="newsletter">
+        <div>
+          <span class="eyebrow">GET FIRST DIBS</span>
+          <h2>Stay in the loop.</h2>
+          <p>New drops, restocks, and vault picks. No noise.</p>
+        </div>
+        <form id="newsletter-form">
+          <label class="sr-only" for="email">Email address</label
+          ><input
+            id="email"
+            type="email"
+            placeholder="Your email address"
+            required
+          /><button type="submit">
+            Join the list <i class="ph ph-arrow-up-right"></i>
+          </button>
+        </form>
+        <p class="form-message" id="form-message" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">SOLEVAULT</a>
+          <p>
+            Good kicks change the whole fit.<br />Find your next pair with us.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/" aria-label="Instagram"
+              ><i class="ph ph-instagram-logo"></i></a
+            ><a href="https://tiktok.com/" aria-label="TikTok"
+              ><i class="ph ph-tiktok-logo"></i></a
+            ><a href="https://facebook.com/" aria-label="Facebook"
+              ><i class="ph ph-facebook-logo"></i></a
+            ><a href="https://pinterest.com/" aria-label="Pinterest"
+              ><i class="ph ph-pinterest-logo"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="#picks">New arrivals</a><a href="#collection">Collections</a
+          ><a href="#all-products">Best sellers</a>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <a href="#faq">FAQs</a><a href="#faq">Shipping & returns</a
+          ><a href="mailto:hello@solevault.example">Contact us</a>
+        </div>
+        <div class="footer-column">
+          <h3>The details</h3>
+          <p>Built for sneaker culture.<br />Made for your everyday.</p>
+          <span class="footer-tag"
+            ><i class="ph ph-shield-check"></i> Style you can step into</span
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SOLEVAULT. All rights reserved.</span>
+        <div><a href="#faq">Privacy</a><a href="#faq">Terms</a></div>
+        <span>STEP INTO YOUR NEXT.</span>
+      </div>
+    </footer>
+    <script src="./script.js"></script><script src="./store.js"></script>
+  </body>
+</html>

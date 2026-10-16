@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#100303" />
+    <title>Shop All Footwear — SOLEVAULT</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">SOLEVAULT</a>
+      <nav class="desktop-nav">
+        <a href="shop.html?sort=newest">New arrivals</a
+        ><a href="shop.html">Shop all</a><a href="index.html#reviews">Reviews</a
+        ><a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-icon" href="shop.html" aria-label="Search"
+          ><i class="ph-duotone ph-magnifying-glass"></i></a
+        ><a class="header-icon" href="cart.html" aria-label="Shopping bag"
+          ><i class="ph-duotone ph-bag"></i
+          ><span class="cart-count" data-cart-count>0</span></a
+        ><button class="menu-toggle" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </header>
+    <main class="store-page">
+      <section class="store-hero">
+        <div class="store-crumbs"><a href="index.html">Home</a> / Shop</div>
+        <span class="eyebrow">THE WHOLE VAULT, ONE PLACE</span>
+        <h1>FIND YOUR NEXT PAIR<span class="red-dot">.</span></h1>
+        <p>
+          From everyday sneakers to easy slides and statement-making kicks, find
+          the pair that fits your rotation.
+        </p>
+      </section>
+      <nav class="category-strip" aria-label="Shop categories">
+        <a class="category-tile" href="shop.html?category=Sneakers"
+          ><strong>Sneakers</strong><span>Everyday icons ↗</span></a
+        ><a class="category-tile" href="shop.html?gender=Men"
+          ><strong>Men</strong><span>Built for your fit ↗</span></a
+        ><a class="category-tile" href="shop.html?gender=Women"
+          ><strong>Women</strong><span>Make a statement ↗</span></a
+        ><a class="category-tile" href="shop.html?category=Running"
+          ><strong>Running</strong><span>Made to move ↗</span></a
+        ><a class="category-tile" href="shop.html?category=Slides"
+          ><strong>Slides</strong><span>Off-duty comfort ↗</span></a
+        ><a class="category-tile" href="shop.html?category=Flip-Flops"
+          ><strong>Flip-flops</strong><span>Easy days ↗</span></a
+        >
+      </nav>
+      <section class="shop-layout">
+        <aside class="filter-panel" id="filter-panel">
+          <div class="filter-title">
+            <h2>Filters</h2>
+            <button class="clear-filters" id="clear-filters">Clear all</button>
+          </div>
+          <div class="filter-group">
+            <h3>GENDER</h3>
+            <label class="filter-option"
+              ><input type="checkbox" name="gender" value="Men" /> Men</label
+            ><label class="filter-option"
+              ><input type="checkbox" name="gender" value="Women" />
+              Women</label
+            ><label class="filter-option"
+              ><input type="checkbox" name="gender" value="Unisex" />
+              Unisex</label
+            >
+          </div>
+          <div class="filter-group">
+            <h3>CATEGORY</h3>
+            <div id="category-filters">
+              <label class="filter-option"
+                ><input type="checkbox" name="category" value="Sneakers" />
+                Sneakers</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Running" />
+                Running shoes</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Basketball" />
+                Basketball</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Casual" />
+                Casual</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Slides" />
+                Slides</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Flip-Flops" />
+                Flip-flops</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="category" value="Formal" />
+                Formal</label
+              >
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>SIZE (EU)</h3>
+            <div id="size-filters">
+              <label class="filter-option"
+                ><input type="checkbox" name="size" value="38" /> 38</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="39" /> 39</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="40" /> 40</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="41" /> 41</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="42" /> 42</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="43" /> 43</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="44" /> 44</label
+              ><label class="filter-option"
+                ><input type="checkbox" name="size" value="45" /> 45</label
+              >
+            </div>
+          </div>
+          <div class="filter-group">
+            <h3>PRICE RANGE (USD)</h3>
+            <div class="price-fields">
+              <input
+                type="number"
+                id="min-price"
+                placeholder="Min"
+                min="0"
+                aria-label="Minimum price"
+              /><input
+                type="number"
+                id="max-price"
+                placeholder="Max"
+                min="0"
+                aria-label="Maximum price"
+              />
+            </div>
+          </div>
+        </aside>
+        <div class="shop-results">
+          <div class="shop-toolbar">
+            <p id="result-count">Showing products</p>
+            <div class="toolbar-actions">
+              <button class="mobile-filter-button" id="open-filters">
+                <i class="ph ph-sliders-horizontal"></i> Filters</button
+              ><label class="search-box"
+                ><i class="ph ph-magnifying-glass"></i
+                ><input
+                  type="search"
+                  id="product-search"
+                  placeholder="Search the vault…"
+                  aria-label="Search products" /></label
+              ><select id="sort-products" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest arrivals</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </div>
+          </div>
+          <div class="shop-grid" id="shop-grid"></div>
+          <p class="pagination-note">
+            You're browsing the SoleVault demo collection. Product details and
+            stock are sample data.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">SOLEVAULT</a>
+          <p>
+            Good kicks change the whole fit.<br />Find your next pair with us.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/" aria-label="Instagram"
+              ><i class="ph ph-instagram-logo"></i></a
+            ><a href="https://tiktok.com/" aria-label="TikTok"
+              ><i class="ph ph-tiktok-logo"></i></a
+            ><a href="https://facebook.com/" aria-label="Facebook"
+              ><i class="ph ph-facebook-logo"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="shop.html">Shop all</a
+          ><a href="shop.html?category=Sneakers">Sneakers</a
+          ><a href="shop.html?category=Slides">Slides</a>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <a href="index.html#faq">FAQs</a
+          ><a href="index.html#faq">Shipping & returns</a
+          ><a href="mailto:hello@solevault.example">Contact us</a>
+        </div>
+        <div class="footer-column">
+          <h3>Your bag</h3>
+          <a href="cart.html">View shopping bag</a>
+          <p>Step into your next.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SOLEVAULT. All rights reserved.</span>
+        <div>
+          <a href="index.html#faq">Privacy</a><a href="index.html#faq">Terms</a>
+        </div>
+        <span>STEP INTO YOUR NEXT.</span>
+      </div>
+    </footer>
+    <div class="toast-message" id="toast-message" role="status"></div>
+    <script src="./store.js"></script>
+    <script src="./shop.js"></script>
+  </body>
+</html>

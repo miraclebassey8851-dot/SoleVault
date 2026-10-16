@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#100303" />
+    <title>Product Details — SOLEVAULT</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">SOLEVAULT</a>
+      <nav class="desktop-nav">
+        <a href="shop.html?sort=newest">New arrivals</a
+        ><a href="shop.html">Shop all</a><a href="index.html#reviews">Reviews</a
+        ><a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-icon" href="shop.html" aria-label="Search"
+          ><i class="ph-duotone ph-magnifying-glass"></i></a
+        ><a class="header-icon" href="cart.html" aria-label="Shopping bag"
+          ><i class="ph-duotone ph-bag"></i
+          ><span class="cart-count" data-cart-count>0</span></a
+        ><button class="menu-toggle" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </header>
+    <main class="product-detail">
+      <div class="store-crumbs">
+        <a href="index.html">Home</a> / <a href="shop.html">Shop</a> /
+        <span id="crumb-product">Product</span>
+      </div>
+      <section class="product-layout" id="product-layout">
+        <div class="product-gallery">
+          <div class="thumbnail-list" id="thumbnail-list"></div>
+          <div class="product-main-image">
+            <img id="main-product-image" src="" alt="" />
+          </div>
+        </div>
+        <div class="detail-info">
+          <p class="product-brand" id="detail-brand"></p>
+          <h1 id="detail-name">Loading product…</h1>
+          <div class="detail-rating">
+            <span class="stars">★★★★★</span><span id="detail-rating"></span
+            ><a href="#related-products">See similar items</a>
+          </div>
+          <div class="detail-price" id="detail-price"></div>
+          <p class="detail-description" id="detail-description"></p>
+          <div class="option-block">
+            <div class="option-heading">
+              <strong>CHOOSE COLOUR</strong
+              ><span id="selected-color-label"></span>
+            </div>
+            <div class="detail-colors" id="detail-colors"></div>
+          </div>
+          <div class="option-block">
+            <div class="option-heading">
+              <strong>SELECT SIZE (EU)</strong
+              ><a href="#size-guide">Size guide</a>
+            </div>
+            <div class="size-grid" id="size-grid"></div>
+          </div>
+          <div class="option-block">
+            <div class="option-heading">
+              <strong>QUANTITY</strong><span id="stock-note"></span>
+            </div>
+            <div class="quantity-control">
+              <button id="quantity-minus" aria-label="Decrease quantity">
+                −</button
+              ><output id="quantity-value">1</output
+              ><button id="quantity-plus" aria-label="Increase quantity">
+                +
+              </button>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <button class="store-button primary" id="add-to-cart">
+              ADD TO BAG — <span id="button-price"></span></button
+            ><button class="store-button secondary" id="buy-now">
+              BUY NOW <i class="ph ph-arrow-up-right"></i>
+            </button>
+          </div>
+          <p class="detail-message" id="detail-message" aria-live="polite"></p>
+          <div class="delivery-notes">
+            <div class="delivery-note">
+              <i class="ph ph-truck"></i
+              ><span
+                ><strong>Delivery made simple</strong><br />Delivery options
+                confirmed at checkout.</span
+              >
+            </div>
+            <div class="delivery-note">
+              <i class="ph ph-arrow-counter-clockwise"></i
+              ><span
+                ><strong>Easy-to-understand returns</strong><br />Check our
+                returns policy before ordering.</span
+              >
+            </div>
+            <div class="delivery-note">
+              <i class="ph ph-shield-check"></i
+              ><span
+                ><strong>Shop with confidence</strong><br />Review product
+                details before you buy.</span
+              >
+            </div>
+          </div>
+          <div class="detail-description-block" id="size-guide">
+            <h3>SIZE & FIT</h3>
+            <p>
+              Sizes shown use the EU sizing scale. Fit can vary by shoe style,
+              so compare with a pair you already wear comfortably before placing
+              an order.
+            </p>
+          </div>
+          <div class="detail-description-block">
+            <h3>PRODUCT DETAILS</h3>
+            <p id="product-specs"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="related-section" id="related-products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">KEEP EXPLORING</span>
+          <h2>You might like these<span class="red-dot">.</span></h2>
+        </div>
+        <a class="text-link" href="shop.html"
+          >Shop all <i class="ph ph-arrow-right"></i
+        ></a>
+      </div>
+      <div class="product-grid" id="related-grid"></div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">SOLEVAULT</a>
+          <p>
+            Good kicks change the whole fit.<br />Find your next pair with us.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="shop.html">Shop all</a
+          ><a href="shop.html?category=Sneakers">Sneakers</a>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <a href="index.html#faq">FAQs</a
+          ><a href="index.html#faq">Shipping & returns</a>
+        </div>
+        <div class="footer-column">
+          <h3>Your bag</h3>
+          <a href="cart.html">View shopping bag</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SOLEVAULT. All rights reserved.</span>
+        <div>
+          <a href="index.html#faq">Privacy</a><a href="index.html#faq">Terms</a>
+        </div>
+        <span>STEP INTO YOUR NEXT.</span>
+      </div>
+    </footer>
+    <div class="toast-message" id="toast-message" role="status"></div>
+    <script src="./store.js"></script>
+    <script src="./product.js"></script>
+  </body>
+</html>
